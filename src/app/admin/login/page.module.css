@@ -1,0 +1,62 @@
+.loginContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background);
+  padding: 2rem;
+}
+
+.loginBox {
+  width: 100%;
+  max-width: 400px;
+  background: var(--card);
+  padding: 3rem 2rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+}
+
+.brand a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.loginBox h2 {
+  font-size: 1.5rem;
+  color: var(--foreground);
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.formGroup label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #a3a3a3;
+}
+
+.input {
+  width: 100%;
+  padding: 0.875rem;
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) / 2);
+  background: var(--background);
+  color: var(--foreground);
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary);
+}

@@ -1,0 +1,352 @@
+.main {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero Section */
+.heroSection {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.heroBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(5, 5, 5, 0.95), rgba(5, 5, 5, 0.6));
+  z-index: -1;
+}
+
+.heroContent {
+  max-width: 800px;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+  z-index: 1;
+  animation: fadeIn 1s ease-out;
+}
+
+.heroContent h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  background: linear-gradient(135deg, #ffffff, #D4AF37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroContent p {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.heroActions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* Shared Section Styles */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionHeader h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(to right, #ffffff, var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.sectionHeader p {
+  color: #a3a3a3;
+  font-size: 1.125rem;
+  letter-spacing: 0.5px;
+}
+
+/* Featured Vehicles */
+.featuredSection {
+  padding: 6rem 2rem;
+  background-color: var(--background);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vehicleGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.vehicleCard {
+  background: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid var(--border);
+}
+
+.vehicleCard:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
+  border-color: rgba(212, 175, 55, 0.5);
+}
+
+.vehicleImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background-color: var(--secondary);
+}
+
+.vehicleDetails {
+  padding: 1.5rem;
+}
+
+.vehicleMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.vehicleMeta h3 {
+  font-size: 1.5rem;
+  color: var(--foreground);
+}
+
+.vehicleType {
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--primary);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.vehiclePrice {
+  font-size: 1.125rem;
+  color: #a3a3a3;
+  margin-bottom: 1.5rem;
+}
+
+.vehiclePrice strong {
+  font-size: 1.5rem;
+  color: var(--foreground);
+}
+
+.bookBtn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 0.875rem;
+  background-color: var(--primary);
+  color: #000;
+  border-radius: var(--radius);
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.bookBtn:hover {
+  background-color: var(--primary-hover);
+}
+
+.viewAllWrapper {
+  text-align: center;
+}
+
+/* Why Choose Us */
+.whyUsSection {
+  padding: 8rem 2rem;
+  background: radial-gradient(circle at center, rgba(212,175,55,0.05) 0%, var(--background) 100%);
+  position: relative;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featureCard {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background: rgba(18, 18, 18, 0.6);
+  backdrop-filter: blur(12px);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-10px);
+  border-color: rgba(212, 175, 55, 0.5);
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15);
+}
+
+.featureIcon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background-color: rgba(212, 175, 55, 0.1);
+  color: var(--primary);
+  border-radius: 50%;
+}
+
+.featureCard h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--foreground);
+}
+
+.featureCard p {
+  color: #a3a3a3;
+  line-height: 1.6;
+}
+
+.destinationsSection {
+  padding: 8rem 2rem;
+  text-align: center;
+  position: relative;
+  background-image: linear-gradient(rgba(5, 5, 5, 0.4), rgba(5, 5, 5, 0.6)), url('/images/varanasi_bg_texture.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.destinationsSection::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at center, rgba(212,175,55,0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.destinationsContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.destinationTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.destinationTags span {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 2rem;
+  font-weight: 500;
+  color: var(--foreground);
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow);
+}
+
+.destinationTags span:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: scale(1.05);
+}
+
+/* Testimonials */
+.testimonialsSection {
+  padding: 6rem 2rem;
+  background-color: var(--secondary);
+}
+
+.testimonialGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonialCard {
+  background: linear-gradient(145deg, var(--card) 0%, rgba(18,18,18,0.4) 100%);
+  padding: 2.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border-top: 4px solid var(--primary);
+  border-left: 1px solid rgba(255,255,255,0.05);
+  border-right: 1px solid rgba(255,255,255,0.05);
+  transition: transform 0.4s ease;
+}
+
+.testimonialCard:hover {
+  transform: translateY(-8px);
+}
+
+.stars {
+  color: var(--primary);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.testimonialCard p {
+  font-style: italic;
+  color: #a3a3a3;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.testimonialCard h4 {
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .heroContent h1 {
+    font-size: 2.5rem;
+  }
+  .heroContent p {
+    font-size: 1.125rem;
+  }
+  .heroActions {
+    flex-direction: column;
+  }
+}

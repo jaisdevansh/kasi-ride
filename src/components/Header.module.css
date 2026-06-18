@@ -1,0 +1,45 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: rgba(5, 5, 5, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  font-family: var(--font-space), sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.navLink {
+  font-weight: 500;
+  color: #a3a3a3;
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: var(--primary);
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+}

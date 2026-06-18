@@ -1,0 +1,77 @@
+:root {
+  --background: #050505;
+  --foreground: #ffffff;
+  --primary: #D4AF37; /* Gold */
+  --primary-hover: #b8962f;
+  --secondary: #1a1a1a;
+  --border: #333333;
+  --card: #121212; /* Dark Gray Cards */
+  --card-foreground: #ffffff;
+  --radius: 24px;
+  --shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 10px 32px -4px rgba(0, 0, 0, 0.6);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-space), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Global Button Styles */
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.75rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-family: var(--font-space), sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #000000;
+  box-shadow: var(--shadow);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(212, 175, 55, 0.1);
+  transform: translateY(-2px);
+}
