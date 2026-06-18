@@ -21,9 +21,9 @@ export default function Home() {
           </div>
           <div className={styles.vehicleGrid}>
             <div className={styles.vehicleCard}>
-              <div className={styles.vehicleImageWrapper}>
+              <Link href="/vehicles/honda-activa" className={styles.vehicleImageWrapper} style={{ display: 'block' }}>
                 <Image src="/images/honda_activa.png" alt="Honda Activa" fill style={{ objectFit: 'cover' }} />
-              </div>
+              </Link>
               <div className={styles.vehicleDetails}>
                 <div className={styles.vehicleMeta}>
                   <h3>Honda Activa 6G</h3>
@@ -37,9 +37,9 @@ export default function Home() {
             </div>
 
             <div className={styles.vehicleCard}>
-              <div className={styles.vehicleImageWrapper}>
+              <Link href="/vehicles/royal-enfield" className={styles.vehicleImageWrapper} style={{ display: 'block' }}>
                 <Image src="/images/royal_enfield.png" alt="Royal Enfield Classic 350" fill style={{ objectFit: 'cover' }} />
-              </div>
+              </Link>
               <div className={styles.vehicleDetails}>
                 <div className={styles.vehicleMeta}>
                   <h3>Royal Enfield Classic</h3>

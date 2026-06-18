@@ -56,10 +56,10 @@ export default function VehicleCatalog() {
           <section className={styles.grid}>
             {vehicles.map((v) => (
               <div key={v.id} className={styles.card}>
-                <div className={styles.imageWrapper}>
+                <Link href={`/vehicles/${v.id}`} className={styles.imageWrapper} style={{ display: 'block' }}>
                   <Image src={v.image} alt={v.name} fill style={{ objectFit: 'cover' }} />
                   {!v.available && <div className={styles.unavailableBadge}>Currently Rented</div>}
-                </div>
+                </Link>
                 <div className={styles.details}>
                   <div className={styles.meta}>
                     <h3>{v.name}</h3>
