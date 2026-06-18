@@ -103,7 +103,16 @@
 }
 
 @media (max-width: 600px) {
+  .main {
+    padding: 2rem 1rem;
+  }
+  .formCard {
+    padding: 1.5rem;
+  }
   .formRow {
     grid-template-columns: 1fr;
+  }
+  .actions {
+    flex-direction: column;
   }
 }
